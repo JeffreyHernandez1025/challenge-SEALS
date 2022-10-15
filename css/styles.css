@@ -1,0 +1,123 @@
+p {
+    color: white;
+    padding-left: 20px;
+    animation: notSecret .5s infinite alternate;
+}
+
+#secret {
+    padding: auto;
+    margin: auto;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding-bottom: 50px;
+}
+
+html {
+    background-color: black;
+}
+
+.num {
+    color: white;
+    padding-left: 10px;
+}
+
+.div {
+    border: 2px white solid;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    padding-left: 20px;
+    animation: TxT 4s infinite normal;
+}
+
+#secret {
+    align-content: center;
+    margin: auto;
+    padding: auto;
+}
+
+@keyframes TxT {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@keyframes Secret {
+    0% {
+        color: white;
+    }
+
+    15% {
+        color: violet;
+    }
+
+    30% {
+        color: indigo;
+    }
+
+    45% {
+        color: blue;
+    }
+
+    60% {
+        color: green;
+    }
+
+    75% {
+        color: yellow;
+    }
+
+    90% {
+        color: orange;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+        padding-bottom: 60px;
+    }
+
+    .num {
+        font-size: 15px;
+    }
+
+    h4 {
+        font-size: 11px;
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+
+    div {
+        padding-bottom: 25px;
+    }
+}
+
+@keyframes notSecret {}
