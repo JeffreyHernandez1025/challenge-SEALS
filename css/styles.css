@@ -3,13 +3,16 @@ p {
     padding-left: 20px;
     animation: notSecret .5s infinite alternate;
 }
-
-#secret {
+#secretOn {
     padding: auto;
     margin: auto;
     display: flex;
 }
-
+#secretOff {
+    padding: auto;
+    margin: auto;
+    display: flex;
+}
 h1 {
     text-align: center;
     color: white;
@@ -27,6 +30,7 @@ html {
 
 .div {
     border: 2px white solid;
+    display: block;
 }
 
 h2 {
@@ -40,10 +44,11 @@ h4 {
     animation: TxT 4s infinite normal;
 }
 
-#secret {
+#secretDiv {
     align-content: center;
     margin: auto;
     padding: auto;
+    flex-direction: row;
 }
 
 @keyframes TxT {
@@ -60,7 +65,7 @@ h4 {
     }
 }
 
-@keyframes Secret {
+@keyframes secret {
     0% {
         color: white;
     }
@@ -94,6 +99,7 @@ h4 {
     }
 }
 
+/* for mobile */
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 20px;

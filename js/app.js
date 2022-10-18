@@ -4,23 +4,29 @@
  * 
  * This file contains a function that will trigger a hidden animation which makes all the text rainbow.
  */
+const secretBtnOn = document.getElementById('secretOn')
+const secretBtnOff = document.getElementById('secretOff')
 
-const secretBtn = document.querySelector("#secret")
-const stylesheet = document.styleSheets[0]
-const secretTag = [...stylesheet.cssRules].find((r) => r.selectorText === "p")
+// triggers animation 
+function secretOn() {
+    const secretTag = document.getElementsByTagName("p")[0]
+    const secretTag2 = document.getElementsByTagName("p")[1]
+    const secretTag3 = document.getElementsByTagName("p")[2]
 
-console.log(secretTag)
+    secretTag.style.animation = 'secret .5s infinite alternate'
+    secretTag2.style.animation = 'secret .5s infinite alternate'
+    secretTag3.style.animation = 'secret .5s infinite alternate'
+}
+// turns off animation
+function secretOff() {
+    const secretTag = document.getElementsByTagName("p")[0]
+    const secretTag2 = document.getElementsByTagName("p")[1]
+    const secretTag3 = document.getElementsByTagName("p")[2]
 
-
-
-function secret() {
-    const newAnim = 'Secret .5 infinite alternate'
-
-    if (secretTag.style.setProperty('animation', 'notSecret .5s infinite alternate')) {
-        secretTag.style.setProperty('animation', newAnim)
-    } else {
-        secretTag.style.setProperty('animation', 'notSecret .5s infinite alternate')
-    }
+    secretTag.style.animation = 'notSecret .5s infinite alternate'
+    secretTag2.style.animation = 'notSecret .5s infinite alternate'
+    secretTag3.style.animation = 'notSecret .5s infinite alternate'
 }
 
-secretBtn.addEventListener('click', secret)
+secretBtnOn.addEventListener('click', secretOn)
+secretBtnOff.addEventListener('click', secretOff)
